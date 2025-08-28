@@ -1,0 +1,125 @@
+{
+  "components": [
+    {
+      "text": "# Aprovar Resgate de Pontos",
+      "type": "text",
+      "layout": {
+        "row": "Row_19p3j36",
+        "columns": null
+      },
+      "id": "Field_0hkdfvo"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_06ikbgf",
+        "columns": null
+      },
+      "id": "Field_0viealt"
+    },
+    {
+      "label": "Solicitante",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0ffor71",
+        "columns": null
+      },
+      "id": "Field_0g7879e",
+      "key": "solicitante",
+      "readonly": "on"
+    },
+    {
+      "label": "Código do Solicitante",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0kc2x45",
+        "columns": null
+      },
+      "id": "Field_1j4mi3m",
+      "key": "codSolicitante",
+      "readonly": "on"
+    },
+    {
+      "label": "Quantidade de Pontos",
+      "type": "number",
+      "layout": {
+        "row": "Row_0kc2x45",
+        "columns": null
+      },
+      "id": "Field_0itamwa",
+      "key": "qtdePontos",
+      "readonly": "on"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Data Solicitação",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1p6v3n6",
+        "columns": null
+      },
+      "id": "Field_1iy0dhu",
+      "key": "dataSolicitacao",
+      "readonly": true
+    },
+    {
+      "label": "Observação",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0jsutbd",
+        "columns": null
+      },
+      "id": "Field_198wn4t",
+      "key": "observacao",
+      "readonly": "on"
+    },
+    {
+      "height": 30,
+      "type": "spacer",
+      "layout": {
+        "row": "Row_0knfiez",
+        "columns": null
+      },
+      "id": "Field_01e5dm6"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_1wpvykb",
+        "columns": null
+      },
+      "id": "Field_1skbndu"
+    },
+    {
+      "label": "Aprovar Resgate",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1tsbix4",
+        "columns": 6
+      },
+      "id": "Field_09yvnrk",
+      "key": "aprovar"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Data Aprovação",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1tsbix4",
+        "columns": null
+      },
+      "id": "Field_0pnlnyz",
+      "key": "dataAprovacao"
+    }
+  ],
+  "type": "default",
+  "id": "FormAprovacao",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.35.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.23.0",
+  "versionTag": "1.0",
+  "schemaVersion": 18
+}

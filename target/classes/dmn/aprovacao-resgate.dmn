@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="DefinitionsAprovacaoAutomaticaResgate" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.35.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.23.0">
+  <decision id="DecisionAprovacaoAutomaticaResgate" name="Aprovação automatica de resgate" camunda:versionTag="1" camunda:historyTimeToLive="180">
+    <informationRequirement id="InformationRequirement_07abzrn">
+      <requiredInput href="#InputData_1ko05m9" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_0lmpbhm">
+      <input id="Input_1" label="Quantidade de Pontos" camunda:inputVariable="qtdePontos">
+        <inputExpression id="InputExpression_1" typeRef="integer">
+          <text>qtdePontos</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Aprovacao Automática" name="aprovacaoAutomatica" typeRef="boolean" />
+      <rule id="DecisionRule_15pkxjo">
+        <inputEntry id="UnaryTests_0jyp1dm">
+          <text>&lt;10000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xqryac">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_164o9zz">
+        <inputEntry id="UnaryTests_0oap12b">
+          <text>&gt;=10000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_11i8a9j">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_1ko05m9" name="Quantidade de Pontos" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="DecisionAprovacaoAutomaticaResgate">
+        <dc:Bounds height="80" width="180" x="160" y="80" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_05v2uk1" dmnElementRef="InputData_1ko05m9">
+        <dc:Bounds height="45" width="125" x="187" y="317" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_09n9va4" dmnElementRef="InformationRequirement_07abzrn">
+        <di:waypoint x="250" y="317" />
+        <di:waypoint x="250" y="180" />
+        <di:waypoint x="250" y="160" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

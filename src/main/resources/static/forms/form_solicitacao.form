@@ -1,0 +1,82 @@
+{
+  "components": [
+    {
+      "text": "# Solicitar Resgate de Pontos",
+      "type": "text",
+      "layout": {
+        "row": "Row_19p3j36",
+        "columns": null
+      },
+      "id": "Field_0hkdfvo"
+    },
+    {
+      "type": "separator",
+      "layout": {
+        "row": "Row_06ikbgf",
+        "columns": null
+      },
+      "id": "Field_0viealt"
+    },
+    {
+      "label": "Solicitante",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0ffor71",
+        "columns": null
+      },
+      "id": "Field_0g7879e",
+      "key": "solicitante"
+    },
+    {
+      "label": "Código do Solicitante",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0kc2x45",
+        "columns": null
+      },
+      "id": "Field_1j4mi3m",
+      "key": "codSolicitante"
+    },
+    {
+      "label": "Quantidade de Pontos",
+      "type": "number",
+      "layout": {
+        "row": "Row_0kc2x45",
+        "columns": null
+      },
+      "id": "Field_0itamwa",
+      "key": "qtdePontos"
+    },
+    {
+      "subtype": "date",
+      "dateLabel": "Data Solicitação",
+      "type": "datetime",
+      "layout": {
+        "row": "Row_1p6v3n6",
+        "columns": null
+      },
+      "id": "Field_1iy0dhu",
+      "key": "dataSolicitacao"
+    },
+    {
+      "label": "Observação",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0jsutbd",
+        "columns": null
+      },
+      "id": "Field_198wn4t",
+      "key": "observacao"
+    }
+  ],
+  "type": "default",
+  "id": "FormSolicitacao",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.35.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.23.0",
+  "versionTag": "1.0",
+  "schemaVersion": 18
+}

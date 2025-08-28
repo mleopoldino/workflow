@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_028ya0c" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.35.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.23.0">
+  <bpmn:process id="process_pontos_invalidos" name="Notificar Pontos Invalidos" isExecutable="true" camunda:versionTag="1.0" camunda:historyTimeToLive="180" camunda:isStartableInTasklist="false">
+    <bpmn:startEvent id="StartEvent_1" name="Notificar Cliente Pontos Invalidos">
+      <bpmn:outgoing>Flow_07ogp0u</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_07ogp0u" sourceRef="StartEvent_1" targetRef="Activity_1spu4hz" />
+    <bpmn:sendTask id="Activity_1spu4hz" name="Notificar Cliente pontos Invalidos" camunda:delegateExpression="${notificarClientePontosInvalidos}">
+      <bpmn:incoming>Flow_07ogp0u</bpmn:incoming>
+      <bpmn:outgoing>Flow_0e7d07z</bpmn:outgoing>
+    </bpmn:sendTask>
+    <bpmn:sequenceFlow id="Flow_0e7d07z" sourceRef="Activity_1spu4hz" targetRef="Event_0cdemu0" />
+    <bpmn:intermediateCatchEvent id="Event_0cdemu0" name="Break Point - 1 min">
+      <bpmn:incoming>Flow_0e7d07z</bpmn:incoming>
+      <bpmn:outgoing>Flow_0p1tmjo</bpmn:outgoing>
+      <bpmn:timerEventDefinition id="TimerEventDefinition_0xt5pp4">
+        <bpmn:timeDuration xsi:type="bpmn:tFormalExpression">PT1M</bpmn:timeDuration>
+      </bpmn:timerEventDefinition>
+    </bpmn:intermediateCatchEvent>
+    <bpmn:endEvent id="Event_1bprttg" name="Cliente Notificado">
+      <bpmn:incoming>Flow_0p1tmjo</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0p1tmjo" sourceRef="Event_0cdemu0" targetRef="Event_1bprttg" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="process_pontos_invalidos">
+      <bpmndi:BPMNShape id="StartEvent_1_di" bpmnElement="StartEvent_1">
+        <dc:Bounds x="182" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="160" y="145" width="81" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0jgoh0q_di" bpmnElement="Activity_1spu4hz">
+        <dc:Bounds x="270" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0d0kbwb_di" bpmnElement="Event_0cdemu0">
+        <dc:Bounds x="422" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="412" y="145" width="57" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1bprttg_di" bpmnElement="Event_1bprttg">
+        <dc:Bounds x="512" y="102" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="487" y="145" width="87" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_07ogp0u_di" bpmnElement="Flow_07ogp0u">
+        <di:waypoint x="218" y="120" />
+        <di:waypoint x="270" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0e7d07z_di" bpmnElement="Flow_0e7d07z">
+        <di:waypoint x="370" y="120" />
+        <di:waypoint x="422" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0p1tmjo_di" bpmnElement="Flow_0p1tmjo">
+        <di:waypoint x="458" y="120" />
+        <di:waypoint x="512" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
