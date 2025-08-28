@@ -1,3 +1,4 @@
 com/esfera/camunda/delegates/ConsultarValidadePontos.class
+com/esfera/camunda/delegates/CalcularMediaPontosBeneficios.class
 com/esfera/camunda/delegates/NotificarClientePontosInvalidos.class
 com/esfera/camunda/Application.class

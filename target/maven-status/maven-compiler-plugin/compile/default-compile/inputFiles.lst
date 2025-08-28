@@ -1,3 +1,4 @@
-/Users/marcelo/Downloads/workflow/src/main/java/com/esfera/camunda/Application.java
-/Users/marcelo/Downloads/workflow/src/main/java/com/esfera/camunda/delegates/ConsultarValidadePontos.java
-/Users/marcelo/Downloads/workflow/src/main/java/com/esfera/camunda/delegates/NotificarClientePontosInvalidos.java
+/Users/marcelo/eclipse-workspace/workflow/src/main/java/com/esfera/camunda/Application.java
+/Users/marcelo/eclipse-workspace/workflow/src/main/java/com/esfera/camunda/delegates/CalcularMediaPontosBeneficios.java
+/Users/marcelo/eclipse-workspace/workflow/src/main/java/com/esfera/camunda/delegates/ConsultarValidadePontos.java
+/Users/marcelo/eclipse-workspace/workflow/src/main/java/com/esfera/camunda/delegates/NotificarClientePontosInvalidos.java

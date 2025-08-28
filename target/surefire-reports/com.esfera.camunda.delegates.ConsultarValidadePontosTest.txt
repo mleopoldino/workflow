@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.esfera.camunda.delegates.ConsultarValidadePontosTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s -- in com.esfera.camunda.delegates.ConsultarValidadePontosTest
